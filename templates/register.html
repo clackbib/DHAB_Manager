@@ -10,13 +10,15 @@
         <h1> DHAB Management Solutions </h1>
 
 
-    <form action = '' method="post" class = 'registration_form'>
+    <form action = '{% url 'login.views.register' %}' method="post" class = 'registration_form'>
     {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" name = 'register' value = 'Register'/>
     </form>
-
-    <h2> Already a user? Please login <a href="#"> Here</a></h2>
+    {% if error %}
+           <h2 class = 'error_msg'>{{ message }}</h2>
+        {% endif %}
+    <h2> Already a user? Please login <a href="{% url 'login.views.connect' %}"> Here</a></h2>
 
     </div>
 {% endblock %}

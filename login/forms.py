@@ -7,4 +7,9 @@ class Registration(forms.Form):
     password = forms.CharField(max_length=30, widget=forms.PasswordInput(attrs={'placeholder': 'Password'}), label="")
     password_confirm = forms.CharField(max_length=30, widget=forms.PasswordInput(attrs={'placeholder': 'Reenter password'}), label="")
 
+class ConnectionForm(forms.Form):
+    username = forms.CharField(max_length=30, label="")
+    password = forms.CharField(widget=forms.PasswordInput, label="")
+
+
 

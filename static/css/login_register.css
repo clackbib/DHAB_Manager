@@ -8,7 +8,7 @@
     margin-left: -10px;
     background-color: #FFCF79;
 }
-.registration_form input
+ input
 {
     width:300px;
     height:30px;
@@ -16,14 +16,16 @@
     font-size: 1.1em;
     border-radius:10px;
 }
-.registration_form input[type = 'submit']
+ input[type = 'submit']
 {
     background-color:  #FFCF79 ;
     border: solid 2px white;
+    box-shadow: 4px 4px 10px black;
 }
 body{
-    background-image: linear-gradient(to bottom, #92CD00, white);
+    background-image: linear-gradient(to bottom, #92CD00, #E5E4D7);
     background-repeat: no-repeat;
+    background-size: 200% 200%;
 }
 .greeting
 {
@@ -33,9 +35,21 @@ body{
 .greeting h1
 {
     color: white;
-    text-shadow: 0 -1px 4px black;
+    text-shadow: 0 1px 4px black;
 }
 .greeting h2
 {
     color:black;
+}
+h2.error_msg
+{
+    color:red;
+}
+.errorlist
+{
+    display: none;
+}
+.login_form
+{
+    margin:200px;
 }
