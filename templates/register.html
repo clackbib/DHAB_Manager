@@ -1,0 +1,22 @@
+{% extends 'base/base.html'%}
+
+{% block title %}
+       Welcome to DHAB !
+{% endblock %}
+
+
+{% block content %}
+    <div class = "greeting">
+        <h1> DHAB Management Solutions </h1>
+
+
+    <form action = '' method="post" class = 'registration_form'>
+    {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name = 'register' value = 'Register'/>
+    </form>
+
+    <h2> Already a user? Please login <a href="#"> Here</a></h2>
+
+    </div>
+{% endblock %}

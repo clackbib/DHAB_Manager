@@ -1,0 +1,56 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+{% block style %}
+    <link rel = 'stylesheet' href="{% static "css/home_style.css" %}" />
+    <link rel = 'stylesheet' href="{% static "css/sidebar.css" %}" />
+    <link rel = 'stylesheet' href="{% static "css/inside_content.css" %}" />
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+{% endblock %}
+{% block extra_head_content  %}
+{% endblock %}
+
+{% block title %}
+    Welcome, {{ request.user.username|capfirst }}!
+{% endblock %}
+
+{% block content %}
+
+    {% block userbar %}
+          <header class = "user_bar">
+                <span class = "welcome_link">Welcome, <a href = '{% url "sections.user_profile.views.userProfile"%}?userId={{ request.user.id }}' class = "settings_link">{{ request.user.username|capfirst  }}</a>!
+               </span>
+
+              <span class = "logout_link">Log Out <a class = "logout_button" href = {% url "login.views.disconnect" %}>!</a>
+                    </span>
+          </header>
+    {% endblock %}
+    {% block sidebar %}
+        {% include "base/sidebar.html" %}
+    {%  endblock %}
+
+    <section id = "user_content">
+        {% block user_content %}
+
+        {% endblock %}
+    </section>
+    <script>
+
+        $(document).ready(function(){
+            $(".notify").fadeIn("slow");
+            $(".notify").fadeOut(3000);
+
+            $('.option').click( function() {
+                window.location = $(this).find('a').attr('href');
+            }).hover( function() {
+                        $(this).toggleClass('jquery_link_hover');
+                    });
+        });
+
+     </script>
+    <section id='footer'>
+        Copyright The Social V1rus, inc. 1972
+    </section>
+{% endblock %}

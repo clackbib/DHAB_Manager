@@ -1,0 +1,41 @@
+.registration_form
+{
+
+    padding: 20px;
+    text-align: center;
+    display: block;
+    margin-right: -10px;
+    margin-left: -10px;
+    background-color: #FFCF79;
+}
+.registration_form input
+{
+    width:300px;
+    height:30px;
+    text-align: center;
+    font-size: 1.1em;
+    border-radius:10px;
+}
+.registration_form input[type = 'submit']
+{
+    background-color:  #FFCF79 ;
+    border: solid 2px white;
+}
+body{
+    background-image: linear-gradient(to bottom, #92CD00, white);
+    background-repeat: no-repeat;
+}
+.greeting
+{
+    text-align: center;
+
+}
+.greeting h1
+{
+    color: white;
+    text-shadow: 0 -1px 4px black;
+}
+.greeting h2
+{
+    color:black;
+}
