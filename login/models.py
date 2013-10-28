@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Profile(models.Model):
-    user = models.OneToOneField(User);
+    user = models.OneToOneField(User)
     #projects =
+
+    def __unicode__(self):
+        return self.user.username
 
