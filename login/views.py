@@ -3,6 +3,7 @@ from django.shortcuts import render,redirect
 from login.forms import Registration,ConnectionForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from login.models import Profile
 
@@ -58,6 +59,7 @@ def connect(request):
         form = ConnectionForm()
     return render(request, 'login.html', locals())
 
+@login_required(login_url="login.views.connect")
 def disconnect(request):
     logout(request)
     return redirect(reverse("login.views.connect"))

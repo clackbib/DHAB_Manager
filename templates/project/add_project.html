@@ -2,7 +2,7 @@
 
 {% block user_content %}
 
-    <form action = "{% url 'project.views.project' %}" method="POST">
+    <form action = "{% url 'project.views.add_project' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <input type = 'submit' name = 'Create!'/>

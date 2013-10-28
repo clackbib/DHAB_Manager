@@ -24,13 +24,27 @@
               </span>
         </header>
         <div class = 'project_selector'>
-            <form action = '#' method="post">
+            <form action = '{% url 'project.views.update_project' %}' method="post">
+            {% csrf_token %}
                 <span class = "project_change_label"> Jump to project </span>
                 <select name = 'project'>
-                    <option value=" something"> Something </option>
+                    {% if request.session.current_user_projects %}
+                       {% for u in request.session.current_user_projects %}
+                            <option value = "{{ u.name }}"> {{ u.name }} </option>
+                        {% endfor %}
+                    {% else %}
+                        <option value=" something">----------</option>
+                    {% endif %}
                     </select>
                 <input type="submit" value="Load Project"/>
             </form>
+            <h3> Selected project:
+                {% if request.session.selected_project %}
+                {{ request.session.selected_project }}
+                {% else %}
+                    No project Selected
+                {% endif %}
+            </h3>
         </div>
     {% endblock %}
     {% block sidebar %}
