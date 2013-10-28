@@ -3,13 +3,11 @@
 {% load static %}
 
 {% block style %}
-    <link rel = 'stylesheet' href="{% static "css/home_style.css" %}" />
+    <link rel = 'stylesheet' href="{% static "css/main_style.css" %}" />
     <link rel = 'stylesheet' href="{% static "css/sidebar.css" %}" />
     <link rel = 'stylesheet' href="{% static "css/inside_content.css" %}" />
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
     </script>
-{% endblock %}
-{% block extra_head_content  %}
 {% endblock %}
 
 {% block title %}
@@ -19,13 +17,22 @@
 {% block content %}
 
     {% block userbar %}
-          <header class = "user_bar">
-                <span class = "welcome_link">Welcome, <a href = '{% url "sections.user_profile.views.userProfile"%}?userId={{ request.user.id }}' class = "settings_link">{{ request.user.username|capfirst  }}</a>!
-               </span>
+        <header class = "user_bar">
+                <span class = "welcome_link">Welcome, {{ request.user.username  }}
+                </span>
 
-              <span class = "logout_link">Log Out <a class = "logout_button" href = {% url "login.views.disconnect" %}>!</a>
-                    </span>
-          </header>
+              <span class = "logout_link"><a href="{% url "login.views.disconnect" %}">Log Out !</a>
+              </span>
+        </header>
+        <div class = 'project_selector'>
+            <form action = '#' method="post">
+                <span class = "project_change_label"> Jump to project </span>
+                <select name = 'project'>
+                    <option value=" something"> Something </option>
+                    </select>
+                <input type="submit" value="Load Project"/>
+            </form>
+        </div>
     {% endblock %}
     {% block sidebar %}
         {% include "base/sidebar.html" %}
@@ -49,8 +56,8 @@
                     });
         });
 
-     </script>
+    </script>
     <section id='footer'>
-        Copyright The Social V1rus, inc. 1972
+        Copyright DHAB Solutions, 2013
     </section>
 {% endblock %}

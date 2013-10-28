@@ -3,6 +3,8 @@ from django.shortcuts import render,redirect
 from login.forms import Registration,ConnectionForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
+from django.core.urlresolvers import reverse
+from login.models import Profile
 
 def register(request):
     error = False
@@ -23,6 +25,7 @@ def register(request):
                 error = True
             else:
                 user3 = User.objects.create_user(username, email, password)
+                Profile(user = user3).save(); #Profile Created based on User.
                 return redirect("login.views.register")
         else:
             error = True
@@ -43,7 +46,7 @@ def connect(request):
             user = authenticate(username=username, password=password)
             if user:
                 login(request, user)
-                return redirect("login.views.register")
+                return redirect("home.views.home")
             else:
                 error = True
                 message = "Invalid credentials"
@@ -54,3 +57,9 @@ def connect(request):
     else:
         form = ConnectionForm()
     return render(request, 'login.html', locals())
+
+def disconnect(request):
+    logout(request)
+    return redirect(reverse("login.views.connect"))
+
+

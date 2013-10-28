@@ -1,19 +1,20 @@
 {%  load static %}
+
 <nav id="sidebar">
 	    <ul>
 
-            <li><a class='sidebar_item'href="{% url "sections.newsfeed.views.newsfeed" %}">
-                <img class='sidebar_item_img' src="{% static "images/sidebar/rss_icon.png" %}" />
+            <li><a class='sidebar_item'href="#">
+                <img class='sidebar_item_img' src="{% static "images/sidebar/new_project.png" %}" />
             </a></li>
 
-            <li><a class='sidebar_item'href="{% url "sections.forum.views.forum" %}">
-                <img class='sidebar_item_img' src="{% static "images/sidebar/forum.png" %}" />
+            <li><a class='sidebar_item'href="#">
+                <img class='sidebar_item_img' src="{% static "images/sidebar/requirements.png" %}" />
             </a></li>
 
-            <li><a class='sidebar_item'href="{% url "sections.projects.views.projects" %}">
-                <img class='sidebar_item_img' src="{% static "images/sidebar/version.png" %}" />
+            <li><a class='sidebar_item'href="#">
+                <img class='sidebar_item_img' src="{% static "images/sidebar/reports.png" %}" />
             </a></li>
-
+            {% comment %}
             <li><a class='sidebar_item'href="{% url "sections.messaging.views.messaging" %}">
                 <img class='sidebar_item_img' src="{% static "images/sidebar/messages.png" %}" />
 
@@ -27,5 +28,7 @@
             <li><a class='sidebar_item'href="{% url "sections.settings.views.settings" %}">
                 <img class='sidebar_item_img' src="{% static "images/sidebar/settings_icon.png" %}" />
             </a></li>
+            {% endcomment %}
         </ul>
+
 </nav>

@@ -1,0 +1,27 @@
+.user_bar
+{
+    font-size: 2em;
+    border-bottom: inset 5px #CCC;
+
+}
+.welcome_link
+{
+    margin-right: 70%;
+}
+body{
+    background-image: linear-gradient(to bottom, #92CD00, #E5E4D7);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+}
+.project_change_label
+{
+    font-weight: bold;
+}
+.project_selector
+{
+    text-align: center;
+}
+.project_selector select
+{
+    width: 500px;
+}
