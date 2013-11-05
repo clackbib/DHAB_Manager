@@ -4,12 +4,20 @@
     <h1><a href="{% url 'project.views.add_project' %}"> Add a new project </a></h1>
     <h1> Current Projects </h1>
 
+
+    <div class="accordion">
+
     {% for p in projects %}
 
-        <h2> {{ p.creator }} </h2>
-
-
+         <h3> {{ p.name }} </h3>
+        <div>
+            {{ p.description }}
+        </div>
         {% empty %}
-        <h3> Its empty bitch.. </h3>
+
     {% endfor %}
+
+    </div>
+
+
 {% endblock %}

@@ -36,7 +36,7 @@ def register(request):
     return render(request, 'register.html', locals())
 
 def connect(request):
-    error = False
+    notify = False
     message = ""
     if request.method == "POST":
         form = ConnectionForm(request.POST)
@@ -47,14 +47,14 @@ def connect(request):
             user = authenticate(username=username, password=password)
             if user:
                 login(request, user)
-                return redirect("home.views.home")
+                return redirect("/projects/")
             else:
-                error = True
+                notify = True
                 message = "Invalid credentials"
 
         else:
             message = "Fields incomplete."
-            error = True
+            notify = True
     else:
         form = ConnectionForm()
     return render(request, 'login.html', locals())

@@ -1,7 +1,7 @@
 # Create your views here.
-from django.shortcuts import render
-from project.forms import NewProjectForm
-from project.models import Project
+from django.shortcuts import render,redirect
+from project.forms import NewProjectForm, AddRequirementForm
+from project.models import Project, Requirements
 from login.models import Profile
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import HttpResponseRedirect
@@ -16,7 +16,7 @@ def add_project(request):
             profile = Profile.objects.get(user = request.user)
             Project(creator=profile, name= form.cleaned_data['name'], description = form.cleaned_data['description']).save();
             notify = True
-            message = 'Project Successfully Created!'
+            return redirect("project.views.projects")
         else:
             notify = True
             message = 'Form invalid'
@@ -34,5 +34,19 @@ def projects(request):
 
 @login_required(login_url="login.views.connect")
 def update_project(request):
-    request.session['selected_project'] = request.POST['project']
+    request.session['selected_project_id'] = request.POST['project']
+    request.session['selected_project'] = Project.objects.get(id = request.POST['project']).name
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'),locals())
+
+@login_required(login_url="login.views.connect")
+def requirements(request):
+
+    if request.session['selected_project']:
+        if request.method == 'POST':
+            form = AddRequirementForm(request.POST)
+            if form.is_valid():
+                good = True
+        else:
+            form = AddRequirementForm()
+
+    return render(request, 'project/requirements.html', locals())

@@ -6,6 +6,9 @@
     {{ form.as_p }}
    <input type = 'submit' value = 'Log In'/>
    </form>
+     {% if error %}
+           <h2 class = 'error_msg'>{{ message }}</h2>
+        {% endif %}
     <h2><a href="{% url 'login.views.register' %}">Register</a></h2>
     </div>
 {% endblock %}

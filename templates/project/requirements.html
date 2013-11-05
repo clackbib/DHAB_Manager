@@ -1,0 +1,28 @@
+{% extends "base/base_home.html" %}
+
+{% block user_content %}
+    <h1> Project Requirements </h1>
+    {% if request.session.selected_project %}
+        <div class = 'accordion'>
+        <h3>Requirements List</h3>
+            <div>
+                Stuff
+            </div>
+        <h3> Add New Requirement </h3>
+        <form action  = "#" method="POST" class = 'add_requirements_form'>
+
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type = 'submit' value = "Add Requirement"/>
+        </form>
+
+        </div>
+
+
+
+
+
+    {% else %}
+                <h1>No project Selected</h1>
+    {% endif %}
+{% endblock %}
