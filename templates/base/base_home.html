@@ -12,7 +12,11 @@
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script>
   $(function() {
-    $( ".accordion" ).accordion();
+    $( ".accordion" ).accordion({ clearStyle: true, autoHeight: false });
+      $( ".progressbar" ).progressbar({
+      value: 37
+    }).css({'color':"red"});
+      $(".progressbar > div").css({'background':'rgba(0,140,0,0.5)'});
   });
   </script>
 {% endblock %}

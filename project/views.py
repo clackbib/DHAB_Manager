@@ -41,11 +41,24 @@ def update_project(request):
 @login_required(login_url="login.views.connect")
 def requirements(request):
 
+
     if request.session['selected_project']:
+        pj = Project.objects.get(id = request.session['selected_project_id'])
+        requirements =  Requirements.objects.filter(project = pj)
         if request.method == 'POST':
             form = AddRequirementForm(request.POST)
             if form.is_valid():
-                good = True
+                name = form.cleaned_data['name']
+                description = form.cleaned_data['description']
+                size_estimate = form.cleaned_data['size_estimate']
+                effort_estimate = form.cleaned_data['effort_estimate']
+                technique = form.cleaned_data['technique']
+                requirement_type = form.cleaned_data['requirement_type']
+                profile = Profile.objects.get(user = request.user)
+                req = Requirements(project = pj, creator = profile, name = name, description = description, size_estimate=size_estimate, effort_estimate = effort_estimate, technique=technique, requirement_type=requirement_type)
+                req.save();
+                notify = True;
+                message = 'Requirement Saved.'
         else:
             form = AddRequirementForm()
 

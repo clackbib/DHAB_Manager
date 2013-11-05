@@ -5,8 +5,24 @@
     {% if request.session.selected_project %}
         <div class = 'accordion'>
         <h3>Requirements List</h3>
-            <div>
-                Stuff
+            <div class ='accordion'>
+                {% for r in requirements %}
+                       <h4>{{ r.name }}
+
+                       <span class= 'attribute'>{{ r.requirement_type }}</span>
+
+                       </h4>
+
+                        <div style = 'height: 500px'>
+
+
+                            <strong>Completion Status:</strong>
+                            <div class = 'progressbar'></div>
+                            <p>{{ r.description }}</p>
+
+
+                        </div>
+                 {% endfor %}
             </div>
         <h3> Add New Requirement </h3>
         <form action  = "#" method="POST" class = 'add_requirements_form'>
@@ -24,5 +40,8 @@
 
     {% else %}
                 <h1>No project Selected</h1>
+    {% endif %}
+    {% if notify %}
+           <h1 class="notify"> {{ message }} </h1>
     {% endif %}
 {% endblock %}

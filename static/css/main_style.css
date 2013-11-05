@@ -68,3 +68,13 @@ textarea
 {
     display: inline-block;
 }
+.notify
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+}
+.attribute
+{
+    float:right;
+}
