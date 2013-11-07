@@ -1,17 +1,24 @@
 {% extends 'base/base_home.html' %}
 
 {% block user_content %}
+    <h1 class = 'heading'> Current Projects </h1>
     <h1><a href="{% url 'project.views.add_project' %}"> Add a new project </a></h1>
-    <h1> Current Projects </h1>
+
 
 
     <div class="accordion">
 
     {% for p in projects %}
 
-         <h3> {{ p.name }} </h3>
+         <h3> {{ p.name }}  </h3>
         <div>
-            {{ p.description }}
+           <a href="" value = "{{ p.id }}">Delete Project</a>
+            <a href="" value = "{{ p.id }}" >View Details</a><br/><br/>
+
+            <h3> Project Description:</h3>
+                <p>
+                    {{ p.description }}
+                </p>
         </div>
         {% empty %}
 

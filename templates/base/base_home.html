@@ -11,12 +11,17 @@
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script>
-  $(function() {
-    $( ".accordion" ).accordion({ clearStyle: true, autoHeight: false });
-      $( ".progressbar" ).progressbar({
-      value: 37
-    }).css({'color':"red"});
-      $(".progressbar > div").css({'background':'rgba(0,140,0,0.5)'});
+  $(document).ready(function() {
+    $( ".accordion" ).accordion({ clearStyle: true, autoHeight: false }).css({'font-size':'9pt'});
+
+    $('.progressbar').each(function(){
+
+        $(this).progressbar({value: parseInt($(this).attr("value"))});
+    });
+
+    $(".progressbar > div").css({'background':'rgba(0,140,0,0.5)'});
+
+    $('.jquery_date').datepicker();
   });
   </script>
 {% endblock %}
@@ -28,6 +33,7 @@
 {% block content %}
 
     {% block userbar %}
+        <div class = 'top_wrap'>
         <header class = "user_bar">
                 <span class = "welcome_link">Welcome, {{ request.user.username  }}
                 </span>
@@ -36,6 +42,13 @@
               </span>
         </header>
         <div class = 'project_selector'>
+            <h2> Selected project:
+                {% if request.session.selected_project %}
+                {{ request.session.selected_project }}
+                {% else %}
+                    No project Selected
+                {% endif %}
+            </h2>
             <form action = '{% url 'project.views.update_project' %}' method="post">
             {% csrf_token %}
                 <span class = "project_change_label"> Jump to project </span>
@@ -45,18 +58,13 @@
                             <option value = "{{ u.id }}"> {{ u.name }} </option>
                         {% endfor %}
                     {% else %}
-                        <option value=" something">----------</option>
+                        <option value="something">----------</option>
                     {% endif %}
                     </select>
                 <input type="submit" value="Load Project"/>
             </form>
-            <h3> Selected project:
-                {% if request.session.selected_project %}
-                {{ request.session.selected_project }}
-                {% else %}
-                    No project Selected
-                {% endif %}
-            </h3>
+
+        </div>
         </div>
     {% endblock %}
     {% block sidebar %}

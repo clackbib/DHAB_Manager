@@ -1,7 +1,8 @@
 .user_bar
 {
     font-size: 2em;
-    border-bottom: inset 5px #CCC;
+     margin-top:-10px;
+    padding: 10px;
 
 }
 .welcome_link
@@ -20,6 +21,26 @@ body{
 .project_selector
 {
     text-align: center;
+    color:white;
+    margin-top:-20px;
+    padding-bottom: 10px;
+}
+.top_wrap
+{
+     background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #646262),
+        color-stop(0.5, #484848),
+        color-stop(0.5, #3D3D3D),
+        color-stop(1, #4C4C4C)
+    );
+    color:white;
+}
+.top_wrap a
+{
+    color: #F00;
 }
 .project_selector select
 {
@@ -68,13 +89,26 @@ textarea
 {
     display: inline-block;
 }
+
+.attribute
+{
+    float:right;
+}
 .notify
 {
     position: absolute;
     top:50%;
-    left:50%;
+    left:40%;
+    color:white;
+    background-color: black;
+    opacity: .7;
+    padding:20px;
+    border-radius: 10px;
 }
-.attribute
+.heading
 {
-    float:right;
+    background-color: rgba(0,0,0,.8);
+    color: white;
+    padding:10px 20px;
+    margin: 5px -20px;
 }

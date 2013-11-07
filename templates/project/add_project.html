@@ -5,7 +5,7 @@
     <form action = "{% url 'project.views.add_project' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type = 'submit' name = 'Create!'/>
+        <input type = 'submit' value = 'Create!'/>
     </form>
 
     {% if notify %}

@@ -38,6 +38,7 @@ def register(request):
 def connect(request):
     notify = False
     message = ""
+    request.session['selected_project'] = None
     if request.method == "POST":
         form = ConnectionForm(request.POST)
         if form.is_valid():
@@ -47,7 +48,7 @@ def connect(request):
             user = authenticate(username=username, password=password)
             if user:
                 login(request, user)
-                return redirect("/projects/")
+                return redirect("project.views.projects")
             else:
                 notify = True
                 message = "Invalid credentials"

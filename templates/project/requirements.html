@@ -1,9 +1,10 @@
 {% extends "base/base_home.html" %}
 
 {% block user_content %}
-    <h1> Project Requirements </h1>
+    <h1 class = 'heading'> Project Requirements </h1>
     {% if request.session.selected_project %}
         <div class = 'accordion'>
+
         <h3>Requirements List</h3>
             <div class ='accordion'>
                 {% for r in requirements %}
@@ -13,24 +14,28 @@
 
                        </h4>
 
-                        <div style = 'height: 500px'>
+                        <div>
 
-
+                            <h3><a href = "{% url "project.views.edit_requirement" r.id %}"> Edit/Update Requirement </a><br/></h3>
+                            <h3><a href="{% url "project.views.delete_requirement" r.id %}"> Delete Requirement </a></h3>
                             <strong>Completion Status:</strong>
-                            <div class = 'progressbar'></div>
+                            <div class = 'progressbar' value = "{{ r.ratio }}"></div>
                             <p>{{ r.description }}</p>
 
 
                         </div>
+                    {% empty %}
+                      No requirements listed.
                  {% endfor %}
-            </div>
-        <h3> Add New Requirement </h3>
-        <form action  = "#" method="POST" class = 'add_requirements_form'>
+                 <h3> Add New Requirement </h3>
+                <form action  = "{% url "project.views.requirements" %}" method="POST" class = 'add_requirements_form'>
 
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type = 'submit' value = "Add Requirement"/>
-        </form>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type = 'submit' value = "Add Requirement"/>
+                </form>
+            </div>
+
 
         </div>
 
