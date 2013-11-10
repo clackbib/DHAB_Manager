@@ -54,16 +54,16 @@ def requirements(request):
                 name = form.cleaned_data['name']
                 description = form.cleaned_data['description']
                 size_estimate = form.cleaned_data['size_estimate']
-                effort_estimate = form.cleaned_data['effort_estimate']
                 technique = form.cleaned_data['technique']
                 requirement_type = form.cleaned_data['requirement_type']
                 end_date = form.cleaned_data['end_date']
                 profile = Profile.objects.get(user = request.user)
-                req = Requirements(project = pj, creator = profile, name = name, description = description, size_estimate=size_estimate, effort_estimate = effort_estimate, technique=technique, requirement_type=requirement_type, end_date=end_date)
+                req = Requirements(project = pj, creator = profile, name = name, description = description, size_estimate=size_estimate,
+                                   technique=technique, requirement_type=requirement_type, end_date=end_date)
                 req.save();
                 notify = True;
                 message = 'Requirement Saved.'
-
+                return redirect("project.views.requirements")
         else:
             form = AddRequirementForm()
 

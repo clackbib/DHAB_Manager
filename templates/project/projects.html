@@ -2,7 +2,7 @@
 
 {% block user_content %}
     <h1 class = 'heading'> Current Projects </h1>
-    <h1><a href="{% url 'project.views.add_project' %}"> Add a new project </a></h1>
+    <h1><a href="{% url 'project.views.add_project' %}" class = "nav_link"> Add a new project </a></h1>
 
 
 
@@ -12,8 +12,8 @@
 
          <h3> {{ p.name }}  </h3>
         <div>
-           <a href="" value = "{{ p.id }}">Delete Project</a>
-            <a href="" value = "{{ p.id }}" >View Details</a><br/><br/>
+           <a href="" value = "{{ p.id }}" class = "nav_link">Delete Project</a>
+            <a href="" value = "{{ p.id }}" class = "nav_link_alt" >View Details</a><br/><br/>
 
             <h3> Project Description:</h3>
                 <p>

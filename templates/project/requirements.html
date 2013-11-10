@@ -3,23 +3,30 @@
 {% block user_content %}
     <h1 class = 'heading'> Project Requirements </h1>
     {% if request.session.selected_project %}
-        <div class = 'accordion'>
 
-        <h3>Requirements List</h3>
-            <div class ='accordion'>
+         <h3 class = 'toggle_form nav_link'> Add New Requirement </h3>
+                <form action  = "{% url "project.views.requirements" %}" method="POST" class = 'add_requirements_form'>
+
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type = 'submit' value = "Add Requirement"/>
+                </form>
+        <h3 class="heading">Requirements List</h3>
+
                 {% for r in requirements %}
-                       <h4>{{ r.name }}
+                       <h4 class = "toggle nav_link">{{ r.name }}
 
                        <span class= 'attribute'>{{ r.requirement_type }}</span>
 
                        </h4>
 
-                        <div>
+                        <div class = "inner_pane">
 
-                            <h3><a href = "{% url "project.views.edit_requirement" r.id %}"> Edit/Update Requirement </a><br/></h3>
-                            <h3><a href="{% url "project.views.delete_requirement" r.id %}"> Delete Requirement </a></h3>
-                            <strong>Completion Status:</strong>
+                            <h3><a href = "{% url "project.views.edit_requirement" r.id %}" class="nav_link_alt"> Edit/Update Requirement </a><br/></h3>
+                            <h3><a href="{% url "project.views.delete_requirement" r.id %}" class = "delete_link nav_link"> Delete Requirement </a></h3>
+                            <strong>Completion Status: {{ r.ratio|floatformat:2}}%</strong>
                             <div class = 'progressbar' value = "{{ r.ratio }}"></div>
+                            <h4>Description:</h4>
                             <p>{{ r.description }}</p>
 
 
@@ -27,22 +34,6 @@
                     {% empty %}
                       No requirements listed.
                  {% endfor %}
-                 <h3> Add New Requirement </h3>
-                <form action  = "{% url "project.views.requirements" %}" method="POST" class = 'add_requirements_form'>
-
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type = 'submit' value = "Add Requirement"/>
-                </form>
-            </div>
-
-
-        </div>
-
-
-
-
-
     {% else %}
                 <h1>No project Selected</h1>
     {% endif %}

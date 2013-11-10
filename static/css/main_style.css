@@ -1,18 +1,30 @@
 .user_bar
 {
     font-size: 2em;
-     margin-top:-10px;
+     margin-top:0px;
     padding: 10px;
 
 }
 .welcome_link
 {
-    margin-right: 70%;
+    font-size: 15pt;
+    margin-right: 75%;
+}
+.selector_label
+{
+  font-size: 40pt;
+  background: -webkit-linear-gradient(#eee, #333);
+  text-shadow: 0 -1px 4px white;
+  -webkit-background-clip:text;
+  opacity: .5;
 }
 body{
-    background-image: linear-gradient(to bottom, #92CD00, #E5E4D7);
+    /*background-image: linear-gradient(to bottom, #92CD00, #E5E4D7);*/
+    background-color: whitesmoke;
     background-repeat: no-repeat;
     background-size: 200% 200%;
+    width: 1200px;
+    margin: auto;
 }
 .project_change_label
 {
@@ -24,6 +36,20 @@ body{
     color:white;
     margin-top:-20px;
     padding-bottom: 10px;
+}
+.logout_link
+{
+    border-radius: 4px;
+    padding: 5px 20px;
+    background: rgb(202, 60, 60);
+
+}
+.logout_link a
+{
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 15pt;
 }
 .top_wrap
 {
@@ -38,17 +64,23 @@ body{
     );
     color:white;
 }
-.top_wrap a
-{
-    color: #F00;
-}
+
 .project_selector select
 {
     width: 500px;
 }
 #user_content
 {
-    background-color:whitesmoke;
+    background-color:beige;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #646262),
+        color-stop(0.5, #484848),
+        color-stop(0.5, #3D3D3D),
+        color-stop(1, #4C4C4C)
+    );
     opacity: .9;
     padding: 20px;
     height: 500px;
@@ -76,20 +108,9 @@ textarea
 .add_requirements_form
 {
    padding:20px;
-    border: solid 1px black;
     overflow-y: auto;
     height: 300px;
 }
-.add_requirements_form p + p + p + p
-{
-    display: inline-block;
-    margin-right: 600px;
-}
-.add_requirements_form p + p + p
-{
-    display: inline-block;
-}
-
 .attribute
 {
     float:right;
@@ -112,3 +133,61 @@ textarea
     padding:10px 20px;
     margin: 5px -20px;
 }
+.choice_block
+{
+    border:solid 1px black;
+    text-align: center;
+}
+.toggle, .toggle_form
+{
+    color:white;
+    background-color: black;
+    opacity: 1;
+}
+.toggle:hover, .toggle_form:hover
+{
+    cursor: pointer;
+    background: rgb(158, 31, 27);
+}
+.toggle +div, .toggle_form + form
+{
+    display:none;
+    background-color: white;
+}
+.inner_pane
+{
+    background-color: white;
+    padding:10px;
+}
+.nav_link, .nav_link_alt, label
+{
+    border-radius: 4px;
+    padding: 5px 20px;
+    background: rgb(202, 60, 60);
+    text-decoration: none;
+    color:white;
+}
+.nav_link_alt
+{
+    background: rgb(79, 190, 202);
+}
+label
+{
+    background: rgba(202, 146, 55,.6);
+    display: block;
+    width:100px;
+    margin-bottom: 15px;
+    padding:5px;
+    color:black;
+
+}
+.nav_link:hover
+{
+    background: rgb(158, 31, 27);
+}
+.ui-widget-content a
+{
+    color:white;
+}
+
+

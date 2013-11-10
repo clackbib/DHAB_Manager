@@ -4,7 +4,7 @@
 }
 #sidebar ul li img:hover
 {
-    background-color: deepskyblue;
+   background: rgb(202, 60, 60);
 
 }
 #sidebar ul li img
@@ -22,8 +22,9 @@
 }
 #sidebar ul
 {
-    background-image: linear-gradient(to left, #92CD00, #FFCF79);
+    /*background-image: linear-gradient(to left, #92CD00, #FFCF79);*/
     padding:3px;
+
 
 }
 #sidebar
@@ -31,4 +32,6 @@
     text-align: center;
     margin-top: -18px;
     margin-bottom: -18px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }

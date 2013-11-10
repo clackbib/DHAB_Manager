@@ -22,6 +22,27 @@
     $(".progressbar > div").css({'background':'rgba(0,140,0,0.5)'});
 
     $('.jquery_date').datepicker();
+
+     $('.delete_link').click(function(){
+         return confirm("Do you really want to delete this requirement?");
+     });
+      $('.toggle').click(function(){
+          $(this).next().toggle("blind", {}, 500);
+      });
+      $('.toggle_form').click(function(){
+          $('.toggle_form + form').toggle("blind",{},500);
+      });
+
+       $(document).ready(function(){
+            $(".notify").fadeIn("slow");
+            $(".notify").fadeOut(3000);
+
+            $('.option').click( function() {
+                window.location = $(this).find('a').attr('href');
+            }).hover( function() {
+                        $(this).toggleClass('jquery_link_hover');
+                    });
+        });
   });
   </script>
 {% endblock %}
@@ -35,14 +56,14 @@
     {% block userbar %}
         <div class = 'top_wrap'>
         <header class = "user_bar">
-                <span class = "welcome_link">Welcome, {{ request.user.username  }}
+                <span class = "welcome_link">Welcome, {{ request.user.username  }}!
                 </span>
 
               <span class = "logout_link"><a href="{% url "login.views.disconnect" %}">Log Out !</a>
               </span>
         </header>
         <div class = 'project_selector'>
-            <h2> Selected project:
+            <h2 class ="selector_label"> Selected project:
                 {% if request.session.selected_project %}
                 {{ request.session.selected_project }}
                 {% else %}
@@ -76,21 +97,8 @@
 
         {% endblock %}
     </section>
-    <script>
 
-        $(document).ready(function(){
-            $(".notify").fadeIn("slow");
-            $(".notify").fadeOut(3000);
-
-            $('.option').click( function() {
-                window.location = $(this).find('a').attr('href');
-            }).hover( function() {
-                        $(this).toggleClass('jquery_link_hover');
-                    });
-        });
-
-    </script>
     <section id='footer'>
-        Copyright DHAB Solutions, 2013
+        Copyright DHAB Team, 2013
     </section>
 {% endblock %}
