@@ -2,18 +2,18 @@
 
 {% block user_content %}
     <h1 class = 'heading'> Current Projects </h1>
-    <h1><a href="{% url 'project.views.add_project' %}" class = "nav_link"> Add a new project </a></h1>
+    <h1><a href="{% url 'project.views.add_project' %}" class = "nav_link_alt"> Add a new project </a></h1>
 
 
 
-    <div class="accordion">
+
 
     {% for p in projects %}
 
-         <h3> {{ p.name }}  </h3>
-        <div>
-           <a href="" value = "{{ p.id }}" class = "nav_link">Delete Project</a>
-            <a href="" value = "{{ p.id }}" class = "nav_link_alt" >View Details</a><br/><br/>
+         <h3 class="toggle nav_link"> {{ p.name }}  </h3>
+        <div class="inner_pane">
+           <a href="{% url "project.views.delete_project" p.id %}" class = "nav_link delete_link">Delete Project</a>
+            <a href="#" value = "{{ p.id }}" class = "nav_link_alt delete_link" >View Details</a><br/><br/>
 
             <h3> Project Description:</h3>
                 <p>
@@ -24,7 +24,7 @@
 
     {% endfor %}
 
-    </div>
+
 
 
 {% endblock %}

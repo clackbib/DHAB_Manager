@@ -3,4 +3,5 @@
 *.pyc
 *.idea
 *.db
+dev_settings.py
 local_settings.py

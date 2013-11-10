@@ -91,5 +91,9 @@ def delete_requirement(request,id):
     project = Project.objects.get(id = request.session['selected_project_id'] )
     req = get_object_or_404(Requirements,id = id, project = project)
     req.delete()
-    return redirect("project.views.requirements");\
+    return redirect("project.views.requirements");
 
+def delete_project(request, id):
+    pj = get_object_or_404(Project,id = id);
+    pj.delete();
+    return redirect("project.views.projects")
