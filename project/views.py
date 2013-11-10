@@ -6,6 +6,7 @@ from login.models import Profile
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
+from project.models import MileStone
 
 @login_required(login_url="login.views.connect")
 def add_project(request):
@@ -52,6 +53,7 @@ def requirements(request):
             form = AddRequirementForm(request.POST)
             if form.is_valid():
                 name = form.cleaned_data['name']
+                milestone = form.cleaned_data['milestone']
                 description = form.cleaned_data['description']
                 size_estimate = form.cleaned_data['size_estimate']
                 technique = form.cleaned_data['technique']
@@ -59,11 +61,14 @@ def requirements(request):
                 end_date = form.cleaned_data['end_date']
                 profile = Profile.objects.get(user = request.user)
                 req = Requirements(project = pj, creator = profile, name = name, description = description, size_estimate=size_estimate,
-                                   technique=technique, requirement_type=requirement_type, end_date=end_date)
+                                   technique=technique, requirement_type=requirement_type, end_date=end_date, milestone=milestone)
                 req.save();
                 notify = True;
                 message = 'Requirement Saved.'
-                return redirect("project.views.requirements")
+                return redirect("project.views.requirements",locals())
+            else:
+                notify = True
+                message= "Form invalid !"
         else:
             form = AddRequirementForm()
 
@@ -73,6 +78,7 @@ def requirements(request):
 @login_required(login_url="login.views.connect")
 def edit_requirement(request, id):
     project = Project.objects.get(id = request.session['selected_project_id'] )
+    pj_milestones  = MileStone.objects.filter(project = project)
     req = get_object_or_404(Requirements,id = id, project = project)
     if request.method == "POST":
         form = EditRequirement(request.POST, instance= req)
@@ -84,6 +90,8 @@ def edit_requirement(request, id):
             message = "Invalid Information"
     else:
         form = EditRequirement(instance=req)
+        form.milestone.queryset = pj_milestones
+
     return render(request, "project/edit_requirement.html", locals())
 
 @login_required(login_url="login.views.connect")
@@ -93,6 +101,7 @@ def delete_requirement(request,id):
     req.delete()
     return redirect("project.views.requirements");
 
+@login_required(login_url="login.views.connect")
 def delete_project(request, id):
     pj = get_object_or_404(Project,id = id);
     pj.delete();
