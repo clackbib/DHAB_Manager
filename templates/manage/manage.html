@@ -20,10 +20,18 @@
         {% for m in milestones %}
             <h4 class="toggle nav_link"> {{ m.name }} </h4>
             <div class="inner_pane">
+                <h3><a href = "" class="nav_link_alt"> Edit/Update Milestone </a><br/></h3>
+                <h3><a href="{% url "manager.views.delete_milestone" m.id %}" class = "delete_link nav_link"> Delete Milestone </a></h3>
+                <p>
+                     {{ m.description }}
+                </p>
                 <h4 class = "nav_link"> Associated Requirements: </h4>
                     <div>
                            {% for r in m.requirements %}
+                               <h4>
                                <a href="{% url "project.views.edit_requirement" r.id %}" class="nav_link_alt"> {{ r.name }} </a>
+                               <a href = "" class="nav_link" style = "float:right"> Delete Association </a>
+                               </h4>
                                {% empty %}
                                <h1> No associated requirements! </h1>
                            {% endfor %}

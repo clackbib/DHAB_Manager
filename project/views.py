@@ -1,5 +1,6 @@
 # Create your views here.
 from django.shortcuts import render,redirect
+from django import forms
 from project.forms import NewProjectForm, AddRequirementForm, EditRequirement
 from project.models import Project, Requirements
 from login.models import Profile
@@ -42,8 +43,6 @@ def update_project(request):
 
 @login_required(login_url="login.views.connect")
 def requirements(request):
-
-
     if request.session['selected_project']:
         pj = Project.objects.get(id = request.session['selected_project_id'])
         requirements =  Requirements.objects.filter(project = pj)
@@ -59,9 +58,10 @@ def requirements(request):
                 technique = form.cleaned_data['technique']
                 requirement_type = form.cleaned_data['requirement_type']
                 end_date = form.cleaned_data['end_date']
+                start_date = form.cleaned_data['start_date']
                 profile = Profile.objects.get(user = request.user)
                 req = Requirements(project = pj, creator = profile, name = name, description = description, size_estimate=size_estimate,
-                                   technique=technique, requirement_type=requirement_type, end_date=end_date, milestone=milestone)
+                                   technique=technique, requirement_type=requirement_type, end_date=end_date, milestone=milestone,start_date=start_date)
                 req.save();
                 notify = True;
                 message = 'Requirement Saved.'
@@ -82,7 +82,7 @@ def edit_requirement(request, id):
     req = get_object_or_404(Requirements,id = id, project = project)
     if request.method == "POST":
         form = EditRequirement(request.POST, instance= req)
-        notify  = True
+        notify = True
         if form.is_valid():
             form.save()
             message = "Requirement Edited."
@@ -90,7 +90,10 @@ def edit_requirement(request, id):
             message = "Invalid Information"
     else:
         form = EditRequirement(instance=req)
-        form.milestone.queryset = pj_milestones
+        form.fields['milestone'].queryset = pj_milestones
+        form.fields['start_date'] = forms.DateField(initial=req.start_date)
+        form.fields['end_date'] = forms.DateField(initial=req.end_date)
+
 
     return render(request, "project/edit_requirement.html", locals())
 
@@ -103,6 +106,6 @@ def delete_requirement(request,id):
 
 @login_required(login_url="login.views.connect")
 def delete_project(request, id):
-    pj = get_object_or_404(Project,id = id);
-    pj.delete();
+    pj = get_object_or_404(Project,id = id)
+    pj.delete()
     return redirect("project.views.projects")

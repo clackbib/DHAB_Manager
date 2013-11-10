@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'login',
     'project',
     'manager',
+    'reports',
 )
 
 # A sample logging configuration. The only tangible logging

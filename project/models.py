@@ -34,6 +34,7 @@ class Requirements(models.Model):
     current_completion = models.PositiveIntegerField(default=0)
     requirement_type = models.CharField(max_length=30)
     creation_date = models.DateTimeField(auto_now_add=True)
+    start_date = models.DateField()
     end_date = models.DateField()
 
     def __unicode__(self):

@@ -2,37 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adf7df6d-afe2-4215-9f0c-a140d3789c8e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/manage/manage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/grid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/icon_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/slider_handle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/dataDays.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/dataDaysEnh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/dataHours.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gantt_style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.fn.gantt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.fn.gantt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/moment.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/reports/reports.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/views.py" />
       <change type="DELETED" beforePath="C:\Users\Habib\PycharmProjects\DHAB_Manager\dhab_database" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/base_home.html" afterPath="$PROJECT_DIR$/templates/base/base_home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/forms.py" afterPath="$PROJECT_DIR$/project/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/manage/manage.html" afterPath="$PROJECT_DIR$/templates/manage/manage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/models.py" afterPath="$PROJECT_DIR$/project/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DHAB_Manager/settings.py" afterPath="$PROJECT_DIR$/DHAB_Manager/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/sidebar.html" afterPath="$PROJECT_DIR$/templates/base/sidebar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DHAB_Manager/urls.py" afterPath="$PROJECT_DIR$/DHAB_Manager/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/urls.py" afterPath="$PROJECT_DIR$/manager/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/views.py" afterPath="$PROJECT_DIR$/manager/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/views.py" afterPath="$PROJECT_DIR$/project/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DHAB_Manager.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/settings.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384054863353" ignored="false" />
+    <file path="/settings.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384118096397" ignored="false" />
     <file path="/login.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1383761447011" ignored="false" />
-    <file path="/urls.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384054198686" ignored="false" />
-    <file path="/views.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384058959771" ignored="false" />
-    <file path="/Dummy.txt" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384055181698" ignored="false" />
-    <file path="/models.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384057613779" ignored="false" />
+    <file path="/urls.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384118187024" ignored="false" />
+    <file path="/views.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384124377274" ignored="false" />
+    <file path="/Dummy.txt" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384118037694" ignored="false" />
+    <file path="/models.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384124306266" ignored="false" />
     <file path="/forms.py" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384057118629" ignored="false" />
     <file path="/register.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1382736792307" ignored="false" />
     <file path="/base.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1382724606475" ignored="false" />
     <file path="/login_register.css" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1382738637423" ignored="false" />
     <file path="/a.dummy" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384048310353" ignored="false" />
     <file path="/home.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1382979568872" ignored="false" />
-    <file path="/base_home.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384052170912" ignored="false" />
-    <file path="/sidebar.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384054057189" ignored="false" />
+    <file path="/base_home.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384120429313" ignored="false" />
+    <file path="/sidebar.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384118353624" ignored="false" />
     <file path="/main_style.css" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384052268380" ignored="false" />
     <file path="/sidebar.css" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384048763992" ignored="false" />
     <file path="/add_project.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1383869854705" ignored="false" />
@@ -41,7 +57,9 @@
     <file path="/requirements.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384051079960" ignored="false" />
     <file path="/edit_requirement.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1383865219877" ignored="false" />
     <file path="/script.js" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1383869893469" ignored="false" />
-    <file path="/manage.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384059227180" ignored="false" />
+    <file path="/manage.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384116190094" ignored="false" />
+    <file path="/reports.html" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384125048840" ignored="false" />
+    <file path="/style.css" changelist="adf7df6d-afe2-4215-9f0c-a140d3789c8e" time="1384119259733" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,21 +79,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projects.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/project/projects.html">
+      <file leaf-file-name="reports.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/reports/reports.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="39" selection-start="673" selection-end="673" vertical-scroll-proportion="-4.576923">
+            <state line="70" column="29" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.28106508">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manager/views.py">
+        <entry file="file://$PROJECT_DIR$/reports/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="45" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+            <state line="6" column="41" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#26#70#0" expanded="true" />
+                <element signature="e#26#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,7 +102,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="24" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+            <state line="35" column="59" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -93,9 +111,9 @@
         </entry>
       </file>
       <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manager/forms.py">
+        <entry file="file://$PROJECT_DIR$/project/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+            <state line="25" column="95" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -103,40 +121,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base/sidebar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="85" selection-start="338" selection-end="338" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manage.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/manage/manage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="108" selection-start="970" selection-end="970" vertical-scroll-proportion="0.7278106">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="69" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#26#70#0" expanded="true" />
-              </folding>
+            <state line="61" column="66" selection-start="2782" selection-end="2782" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/project/requirements.html">
+      <file leaf-file-name="base_home.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base/base_home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="19" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-6.6153846">
+            <state line="6" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="-2.6153846">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gantt_style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/gantt_style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="323" column="31" selection-start="6537" selection-end="6537" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/manage/manage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="48" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-16.26923">
+              <folding>
+                <element signature="e#1399#1420#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,22 +177,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/project/forms.py" />
-        <option value="$PROJECT_DIR$/static/css/main_style.css" />
-        <option value="$PROJECT_DIR$/project/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base/base_home.html" />
-        <option value="$PROJECT_DIR$/templates/project/projects.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/manager/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base/sidebar.html" />
-        <option value="$PROJECT_DIR$/DHAB_Manager/urls.py" />
-        <option value="$PROJECT_DIR$/DHAB_Manager/settings.py" />
         <option value="$PROJECT_DIR$/manager/models.py" />
         <option value="$PROJECT_DIR$/manager/forms.py" />
-        <option value="$PROJECT_DIR$/project/models.py" />
-        <option value="$PROJECT_DIR$/manager/views.py" />
-        <option value="$PROJECT_DIR$/project/views.py" />
+        <option value="$PROJECT_DIR$/manager/urls.py" />
         <option value="$PROJECT_DIR$/templates/manage/manage.html" />
+        <option value="$PROJECT_DIR$/manager/views.py" />
+        <option value="$PROJECT_DIR$/DHAB_Manager/settings.py" />
+        <option value="$PROJECT_DIR$/DHAB_Manager/urls.py" />
+        <option value="$PROJECT_DIR$/reports/urls.py" />
+        <option value="$PROJECT_DIR$/templates/base/sidebar.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/base/base_home.html" />
+        <option value="$PROJECT_DIR$/reports/views.py" />
+        <option value="$PROJECT_DIR$/project/models.py" />
+        <option value="$PROJECT_DIR$/project/forms.py" />
+        <option value="$PROJECT_DIR$/project/views.py" />
+        <option value="$PROJECT_DIR$/templates/reports/reports.html" />
       </list>
     </option>
   </component>
@@ -239,7 +257,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,11 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,29 +289,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHAB_Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHAB_Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,11 +307,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
+              <option name="myItemId" value="reports" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,34 +339,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHAB_Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHAB_Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHAB_Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHAB_Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHAB_Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -396,10 +364,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager\static" />
+      <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager\static\css" />
+      <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager\static\js" />
       <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager" />
       <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager\templates\base" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager\static" />
       <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager\static\images\sidebar" />
       <recent name="C:\Users\Habib\PycharmProjects\DHAB_Manager\static\images" />
     </key>
@@ -571,9 +543,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17830046" sideWeight="0.7094017" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17905918" sideWeight="0.7094017" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -582,7 +555,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -649,124 +621,122 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login/urls.py">
+    <entry file="file://$PROJECT_DIR$/login/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="460" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHAB_Manager/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="14" selection-start="4552" selection-end="4552" vertical-scroll-proportion="0.0">
+        <state line="18" column="49" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DHAB_Manager/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
+        <state line="16" column="47" selection-start="646" selection-end="646" vertical-scroll-proportion="0.5710594">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manager/models.py">
+    <entry file="file://$PROJECT_DIR$/manager/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="0.093406595">
+        <state line="6" column="30" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base/sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="85" selection-start="338" selection-end="338" vertical-scroll-proportion="-0.65384614">
+        <state line="13" column="74" selection-start="538" selection-end="538" vertical-scroll-proportion="0.61218834">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/forms.py">
+    <entry file="file://$PROJECT_DIR$/static/js/moment.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="55" selection-start="589" selection-end="589" vertical-scroll-proportion="0.5604396">
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="26" selection-start="211" selection-end="211" vertical-scroll-proportion="0.32692307">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manager/forms.py">
+    <entry file="file://$PROJECT_DIR$/templates/manage/manage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+        <state line="40" column="48" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-16.26923">
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#1399#1420#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/models.py">
+    <entry file="file://$PROJECT_DIR$/static/css/gantt_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state line="323" column="31" selection-start="6537" selection-end="6537" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/project/projects.html">
+    <entry file="file://$PROJECT_DIR$/templates/base/base_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="39" selection-start="673" selection-end="673" vertical-scroll-proportion="-4.576923">
+        <state line="6" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manager/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+        <state line="7" column="8" selection-start="261" selection-end="473" vertical-scroll-proportion="0.06104129">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="41" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#26#70#0" expanded="true" />
+            <element signature="e#26#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/project/requirements.html">
+    <entry file="file://$PROJECT_DIR$/project/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="19" selection-start="1674" selection-end="1674" vertical-scroll-proportion="-6.6153846">
-          <folding />
+        <state line="35" column="59" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="95" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="69" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#26#70#0" expanded="true" />
-          </folding>
+        <state line="61" column="66" selection-start="2782" selection-end="2782" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manage/manage.html">
+    <entry file="file://$PROJECT_DIR$/templates/reports/reports.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="108" selection-start="970" selection-end="970" vertical-scroll-proportion="0.7278106">
+        <state line="70" column="29" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.28106508">
           <folding />
         </state>
       </provider>

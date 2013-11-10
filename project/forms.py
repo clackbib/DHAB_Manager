@@ -15,6 +15,7 @@ class NewProjectForm(forms.ModelForm):
 class AddRequirementForm(forms.ModelForm):
     technique = forms.ChoiceField(widget=forms.RadioSelect, choices= ESTIMATION_TECHNIQUES )
     requirement_type = forms.ChoiceField(widget= forms.RadioSelect, choices= REQUIREMENT_TYPES)
+    start_date = forms.DateField(required=False, widget=forms.TextInput(attrs={'class':'jquery_date'}))
     end_date = forms.DateField(required=False, widget=forms.TextInput(attrs={'class':'jquery_date'}))
     class Meta:
         model = Requirements
@@ -23,6 +24,7 @@ class AddRequirementForm(forms.ModelForm):
 class EditRequirement(forms.ModelForm):
     technique = forms.ChoiceField(widget=forms.RadioSelect, choices= ESTIMATION_TECHNIQUES )
     requirement_type = forms.ChoiceField(widget= forms.RadioSelect, choices= REQUIREMENT_TYPES)
+    start_date = forms.DateField(required=False, widget=forms.TextInput(attrs={'class':'jquery_date'}))
     end_date = forms.DateField(required=False, widget=forms.TextInput(attrs={'class':'jquery_date'}))
     class Meta:
         model = Requirements
