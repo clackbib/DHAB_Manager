@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adf7df6d-afe2-4215-9f0c-a140d3789c8e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/icon_sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/slider_handle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/dataDays.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/dataDaysEnh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/dataHours.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gantt_style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.fn.gantt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.fn.gantt.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/moment.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/reports/reports.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reports/views.py" />
       <change type="DELETED" beforePath="C:\Users\Habib\PycharmProjects\DHAB_Manager\dhab_database" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/base_home.html" afterPath="$PROJECT_DIR$/templates/base/base_home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/forms.py" afterPath="$PROJECT_DIR$/project/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/manage/manage.html" afterPath="$PROJECT_DIR$/templates/manage/manage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/models.py" afterPath="$PROJECT_DIR$/project/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DHAB_Manager/settings.py" afterPath="$PROJECT_DIR$/DHAB_Manager/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/sidebar.html" afterPath="$PROJECT_DIR$/templates/base/sidebar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DHAB_Manager/urls.py" afterPath="$PROJECT_DIR$/DHAB_Manager/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/urls.py" afterPath="$PROJECT_DIR$/manager/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/views.py" afterPath="$PROJECT_DIR$/manager/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/views.py" afterPath="$PROJECT_DIR$/project/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DHAB_Manager.iws" />
@@ -79,10 +51,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reports.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reports.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/reports/reports.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="29" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.28106508">
+            <state line="40" column="13" selection-start="1317" selection-end="1317" vertical-scroll-proportion="-26.153847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.cookie.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/jquery.cookie.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_register.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/login_register.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +145,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="40" column="48" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-16.26923">
               <folding>
-                <element signature="e#1399#1420#0" expanded="true" />
+                <marker date="1384116192410" expanded="true" signature="307:427" placeholder="..." />
+                <marker date="1384116192410" expanded="true" signature="706:1680" placeholder="..." />
+                <marker date="1384116192410" expanded="true" signature="955:1017" placeholder="..." />
+                <marker date="1384116192410" expanded="true" signature="1114:1661" placeholder="..." />
+                <marker date="1384116192410" expanded="true" signature="1207:1481" placeholder="..." />
+                <marker date="1384116192410" expanded="true" signature="1408:1419" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -550,7 +547,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2905983" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2905983" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -618,23 +615,11 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="49" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DHAB_Manager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="646" selection-end="646" vertical-scroll-proportion="0.5710594">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manager/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="30" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
@@ -674,7 +659,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="48" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-16.26923">
           <folding>
-            <element signature="e#1399#1420#0" expanded="true" />
+            <marker date="1384116192410" expanded="true" signature="307:427" placeholder="..." />
+            <marker date="1384116192410" expanded="true" signature="706:1680" placeholder="..." />
+            <marker date="1384116192410" expanded="true" signature="955:1017" placeholder="..." />
+            <marker date="1384116192410" expanded="true" signature="1114:1661" placeholder="..." />
+            <marker date="1384116192410" expanded="true" signature="1207:1481" placeholder="..." />
+            <marker date="1384116192410" expanded="true" signature="1408:1419" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -736,7 +726,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/reports/reports.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="29" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.28106508">
+        <state line="40" column="13" selection-start="1317" selection-end="1317" vertical-scroll-proportion="-26.153847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/login_register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
