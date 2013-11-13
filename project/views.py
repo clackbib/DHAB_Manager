@@ -91,8 +91,8 @@ def edit_requirement(request, id):
     else:
         form = EditRequirement(instance=req)
         form.fields['milestone'].queryset = pj_milestones
-        form.fields['start_date'] = forms.DateField(initial=req.start_date)
-        form.fields['end_date'] = forms.DateField(initial=req.end_date)
+        form.fields['start_date'] = forms.DateField(initial=req.start_date,widget=forms.TextInput(attrs={'class':'jquery_date'}))
+        form.fields['end_date'] = forms.DateField(initial=req.end_date,widget=forms.TextInput(attrs={'class':'jquery_date'}))
 
 
     return render(request, "project/edit_requirement.html", locals())

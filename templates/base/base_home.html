@@ -39,7 +39,8 @@
           $(this).next().toggle("blind", {}, 500);
       });
       $('.toggle_form').click(function(){
-          $('.toggle_form + form').toggle("blind",{},500);
+          $(this).next().toggle("blind", {},500)
+          //$('.toggle_form + form').toggle("blind",{},500);
       });
 
        $(document).ready(function(){

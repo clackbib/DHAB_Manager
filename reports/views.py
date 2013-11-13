@@ -1,8 +1,9 @@
 # Create your views here.
 from django.shortcuts import render
 from project.models import MileStone,Requirements,Project
+from django.contrib.auth.decorators import login_required
 
-
+@login_required(login_url="login.views.connect")
 def reports(request):
     if request.session['selected_project']:
         pj = Project.objects.get(id = request.session['selected_project_id'])

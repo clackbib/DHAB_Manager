@@ -1,5 +1,5 @@
 from django import forms
-from project.models import Project, Requirements
+from project.models import Project, Requirements,Assignment
 
 ESTIMATION_TECHNIQUES = (('Function Point', 'Function Point '), ('KLOC', 'KLOC') )
 REQUIREMENT_TYPES = (('Functional', 'Functional'),('Non-Functional', 'Non-Functional') )
@@ -19,7 +19,7 @@ class AddRequirementForm(forms.ModelForm):
     end_date = forms.DateField(required=False, widget=forms.TextInput(attrs={'class':'jquery_date'}))
     class Meta:
         model = Requirements
-        exclude = ('creator', 'project','technique','requirement_type','end_date','current_completion',)
+        exclude = ('creator', 'project','technique','requirement_type','end_date','current_completion','assignment')
 
 class EditRequirement(forms.ModelForm):
     technique = forms.ChoiceField(widget=forms.RadioSelect, choices= ESTIMATION_TECHNIQUES )
@@ -28,4 +28,6 @@ class EditRequirement(forms.ModelForm):
     end_date = forms.DateField(required=False, widget=forms.TextInput(attrs={'class':'jquery_date'}))
     class Meta:
         model = Requirements
-        exclude = ('creator', 'project','technique','requirement_type','end_date',)
+        exclude = ('creator', 'project','technique','requirement_type','end_date','assignment')
+
+
