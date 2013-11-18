@@ -19,9 +19,7 @@
     <h1 class="heading"> Reports</h1>
     <h4 class="nav_link"> Milestone schedule </h4>
     <div class="inner_pane">
-        {% for m in milestones %}
-            {{ m.end_date|date:"Y-m-d" }} <br/>
-        {% endfor %}
+       
 	   <div class = "gantt"> </div>
     </div>
      <script>
@@ -67,7 +65,7 @@
                     {% for r in m.requirements %}
                     ,{
                     name: " ",
-					desc: "{{ r.description }}",
+					desc: "{{ r.name }}",
 					values: [
 
                         {

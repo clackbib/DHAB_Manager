@@ -49,7 +49,7 @@ class Assignment(models.Model):
     requirement = models.ForeignKey(Requirements,related_name="req_assoc")
     profile = models.ForeignKey(Profile, related_name="assigned_user")
     role = models.CharField(max_length=30)
-    productivity = models.PositiveIntegerField(default=0)
+    #productivity = models.PositiveIntegerField(default=0)
     task = models.TextField()
     creation_date = models.DateTimeField(auto_now_add=True)
 
