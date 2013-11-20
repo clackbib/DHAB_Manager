@@ -1,43 +1,48 @@
 {% extends "base/base_home.html" %}
 
 {% block user_content %}
-    <h1 class = 'heading'> Project Requirements </h1>
+    <h1 class='heading'> Project Requirements </h1>
     {% if request.session.selected_project %}
 
-         <h3 class = 'toggle_form nav_link'> Add New Requirement </h3>
-                <form action  = "{% url "project.views.requirements" %}" method="POST" class = 'add_requirements_form'>
+        <h3 class='toggle_form nav_link'> Add New Requirement </h3>
+        <form action="{% url "project.views.requirements" %}" method="POST" class='add_requirements_form'>
 
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type = 'submit' value = "Add Requirement"/>
-                </form>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type='submit' value="Add Requirement"/>
+        </form>
         <h3 class="heading">Requirements List</h3>
 
-                {% for r in requirements %}
-                       <h4 class = "toggle nav_link">{{ r.name }}
+        {% for r in requirements %}
+            <h4 class="toggle nav_link">{{ r.name }}
 
-                       <span class= 'attribute'>{{ r.requirement_type }}</span>
+                <span class='attribute'>{{ r.requirement_type }}</span>
 
-                       </h4>
+            </h4>
 
-                        <div class = "inner_pane">
+            <div class="inner_pane">
 
-                            <h3><a href = "{% url "project.views.edit_requirement" r.id %}" class="nav_link_alt"> Edit/Update Requirement </a><br/></h3>
-                            <h3><a href="{% url "project.views.delete_requirement" r.id %}" class = "delete_link nav_link"> Delete Requirement </a></h3>
-                            <strong>Completion Status: {{ r.ratio|floatformat:2}}%</strong>
-                            <div class = 'progressbar' value = "{{ r.ratio }}"></div>
-                            <h4>Description:</h4>
-                            <p>{{ r.description }}</p>
+                <h3><a href="{% url "project.views.edit_requirement" r.id %}" class="nav_link_alt"> Edit/Update
+                    Requirement </a><br/></h3>
+
+                <h3><a href="{% url "project.views.delete_requirement" r.id %}" class="delete_link nav_link"> Delete
+                    Requirement </a></h3>
+                <strong>Completion Status: {{ r.ratio|floatformat:2 }}%</strong>
+
+                <div class='progressbar' value="{{ r.ratio }}"></div>
+                <h4>Description:</h4>
+
+                <p>{{ r.description }}</p>
 
 
-                        </div>
-                    {% empty %}
-                      No requirements listed.
-                 {% endfor %}
+            </div>
+        {% empty %}
+            No requirements listed.
+        {% endfor %}
     {% else %}
-                <h1>No project Selected</h1>
+        <h1>No project Selected</h1>
     {% endif %}
     {% if notify %}
-           <h1 class="notify"> {{ message }} </h1>
+        <h1 class="notify"> {{ message }} </h1>
     {% endif %}
 {% endblock %}

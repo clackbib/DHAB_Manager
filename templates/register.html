@@ -1,24 +1,24 @@
-{% extends 'base/base.html'%}
+{% extends 'base/base.html' %}
 
 {% block title %}
-       Welcome to DHAB !
+    Welcome to DHAB !
 {% endblock %}
 
 
 {% block content %}
-    <div class = "greeting">
+    <div class="greeting">
         <h1> DHAB Management Solutions </h1>
 
 
-    <form action = '{% url 'login.views.register' %}' method="post" class = 'registration_form'>
-    {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" name = 'register' value = 'Register'/>
-    </form>
-    {% if error %}
-           <h2 class = 'error_msg'>{{ message }}</h2>
+        <form action='{% url 'login.views.register' %}' method="post" class='registration_form'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name='register' value='Register'/>
+        </form>
+        {% if error %}
+            <h2 class='error_msg'>{{ message }}</h2>
         {% endif %}
-    <h2> Already a user? Please login <a href="{% url 'login.views.connect' %}"> Here</a></h2>
+        <h2> Already a user? Please login <a href="{% url 'login.views.connect' %}"> Here</a></h2>
 
     </div>
 {% endblock %}

@@ -1,14 +1,13 @@
-
 {% extends "base/base_home.html" %}
 {% load static %}
 
 {% block style %}
     {{ block.super }}
     {% comment %} Gantt Related Links {% endcomment %}
-    <link rel="stylesheet" href="{% static "css/gantt_style.css" %}" />
-    <link rel="stylesheet" href="http://taitems.github.com/UX-Lab/core/css/prettify.css" />
+    <link rel="stylesheet" href="{% static "css/gantt_style.css" %}"/>
+    <link rel="stylesheet" href="http://taitems.github.com/UX-Lab/core/css/prettify.css"/>
     <script src="{% static "js/jquery.fn.gantt.js" %}"></script>
-	<script src="{% static "js/moment.min.js" %}"></script>
+    <script src="{% static "js/moment.min.js" %}"></script>
     <script src="http://taitems.github.com/UX-Lab/core/js/prettify.js"></script>
     {% comment %} End ------------{% endcomment %}
 {% endblock %}
@@ -16,90 +15,89 @@
 {% block user_content %}
     {% if request.session.selected_project %}
 
-    <h1 class="heading"> Reports</h1>
-    <h4 class="nav_link"> Milestone schedule </h4>
-    <div class="inner_pane">
-       
-	   <div class = "gantt"> </div>
-    </div>
-     <script>
-		$(function() {
+        <h1 class="heading"> Reports</h1>
+        <h4 class="nav_link"> Milestone schedule </h4>
+        <div class="inner_pane">
+
+            <div class="gantt"></div>
+        </div>
+        <script>
+            $(function () {
 
 
-
-            function get_date(d)
-            {
-                if (d !== undefined) {
-                var a = d.split("-");
-                var yearMy = a[0];
-                var monthMy = a[1];
-                var dayMy = a[2];
-                var finalDate = new Date(yearMy, monthMy, dayMy);
-                var finalDate = finalDate.getTime();
-                return finalDate;
-                }
-            }
-			var today = moment();
-			var andTwoHours = moment().add("hours",2);
-
-			var today_friendly = "/Date(" + today.valueOf() + ")/";
-			var next_friendly = "/Date(" + andTwoHours.valueOf() + ")/";
-
-			$(".gantt").gantt({
-				source: [
-
-                    {% for m in milestones %}
-                    {
-					name: "{{ m.name }}",
-					desc: "{{ m.description }}",
-					values: [
-
-                        {
-                            from: get_date("{{ m.start_date|date:"Y-m-d" }}"),
-                            to: get_date("{{ m.end_date|date:"Y-m-d" }}"),
-                            label: "{{ m.name }}",
-                            customClass: "ganttBlue"
-                        }
-                    ]
-				    }
-                    {% for r in m.requirements %}
-                    ,{
-                    name: " ",
-					desc: "{{ r.name }}",
-					values: [
-
-                        {
-                            from: get_date("{{ r.start_date|date:"Y-m-d" }}"),
-                            to: get_date("{{ r.end_date|date:"Y-m-d" }}"),
-                            label: "{{ r.name }}",
-                            customClass: "ganttBlue"
-                        }
-                    ]
-
+                function get_date(d) {
+                    if (d !== undefined) {
+                        var a = d.split("-");
+                        var yearMy = a[0];
+                        var monthMy = a[1];
+                        var dayMy = a[2];
+                        var finalDate = new Date(yearMy, monthMy, dayMy);
+                        var finalDate = finalDate.getTime();
+                        return finalDate;
                     }
+                }
 
-                    {% endfor %}
-                    ,
-                    {% endfor %}
+                var today = moment();
+                var andTwoHours = moment().add("hours", 2);
 
-                ],
-				scale: "days",
-				minScale: "hours",
-				navigate: "scroll"
-			});
+                var today_friendly = "/Date(" + today.valueOf() + ")/";
+                var next_friendly = "/Date(" + andTwoHours.valueOf() + ")/";
 
-			$(".gantt").popover({
-				selector: ".bar",
-				title: "I'm a popover",
-				content: "And I'm the content of said popover.",
-				trigger: "hover"
-			});
+                $(".gantt").gantt({
+                    source: [
 
-		});
+                        {% for m in milestones %}
+                            {
+                                name: "{{ m.name }}",
+                                desc: "{{ m.description }}",
+                                values: [
+
+                                    {
+                                        from: get_date("{{ m.start_date|date:"Y-m-d" }}"),
+                                        to: get_date("{{ m.end_date|date:"Y-m-d" }}"),
+                                        label: "{{ m.name }}",
+                                        customClass: "ganttBlue"
+                                    }
+                                ]
+                            }
+                            {% for r in m.requirements %}
+                                ,{
+                                name: " ",
+                                desc: "{{ r.name }}",
+                                values: [
+
+                                    {
+                                        from: get_date("{{ r.start_date|date:"Y-m-d" }}"),
+                                        to: get_date("{{ r.end_date|date:"Y-m-d" }}"),
+                                        label: "{{ r.name }}",
+                                        customClass: "ganttBlue"
+                                    }
+                                ]
+
+                            }
+
+                            {% endfor %}
+                            ,
+                        {% endfor %}
+
+                    ],
+                    scale: "days",
+                    minScale: "hours",
+                    navigate: "scroll"
+                });
+
+                $(".gantt").popover({
+                    selector: ".bar",
+                    title: "I'm a popover",
+                    content: "And I'm the content of said popover.",
+                    trigger: "hover"
+                });
+
+            });
 
         </script>
     {% else %}
-    <h1> No selected Project </h1>
+        <h1> No selected Project </h1>
     {% endif %}
 
 {% endblock %}

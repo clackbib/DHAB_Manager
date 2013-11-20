@@ -3,50 +3,57 @@
 {% block user_content %}
 
     {% if request.session.selected_project %}
-    <h1 class="heading"> Management </h1>
+        <h1 class="heading"> Management </h1>
 
-    <h1 class="nav_link toggle_form"> Add MileStone </h1>
-    <form action = "{% url "manager.views.manage" %}" method="POST" class="add_requirements_form">
-    {% csrf_token %}
-        {{ form.as_p }}
-             <input type = "submit" value="Create MileStone"/>
-    </form>
+        <h1 class="nav_link toggle_form"> Add MileStone </h1>
+        <form action="{% url "manager.views.manage" %}" method="POST" class="add_requirements_form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create MileStone"/>
+        </form>
 
         {% if notify %}
-                <h1 class=" notify"> {{ message }}</h1>
-            {% endif %}
-    <h1 class="heading"> MileStones </h1>
+            <h1 class=" notify"> {{ message }}</h1>
+        {% endif %}
+        <h1 class="heading"> MileStones </h1>
 
         {% for m in milestones %}
             <h4 class="toggle nav_link"> {{ m.name }} </h4>
             <div class="inner_pane">
-                <h3><a href = "{% url "manager.views.edit_milestone" m.id %}" class="nav_link_alt"> Edit/Update Milestone </a><br/></h3>
-                <h3><a href="{% url "manager.views.delete_milestone" m.id %}" class = "delete_link nav_link"> Delete Milestone </a></h3>
+                <h3><a href="{% url "manager.views.edit_milestone" m.id %}" class="nav_link_alt"> Edit/Update
+                    Milestone </a><br/></h3>
+
+                <h3><a href="{% url "manager.views.delete_milestone" m.id %}" class="delete_link nav_link"> Delete
+                    Milestone </a></h3>
+
                 <p>
-                     {{ m.description }}
+                    {{ m.description }}
                 </p>
-                <h4 class = "nav_link"> Associated Requirements: </h4>
-                    <div>
-                           {% for r in m.requirements %}
-                               <h4>
-                               <a href="{% url "project.views.edit_requirement" r.id %}" class="nav_link_alt"> {{ r.name }} </a>
-                               <a href = "{% url "manager.views.delete_assoc" r.id %}" class="nav_link" style = "float:right"> Delete Association </a>
-                               </h4>
-                               {% empty %}
-                               <h1> No associated requirements! </h1>
-                           {% endfor %}
-                    </div>
+                <h4 class="nav_link"> Associated Requirements: </h4>
+
+                <div>
+                    {% for r in m.requirements %}
+                        <h4>
+                            <a href="{% url "project.views.edit_requirement" r.id %}"
+                               class="nav_link_alt"> {{ r.name }} </a>
+                            <a href="{% url "manager.views.delete_assoc" r.id %}" class="nav_link" style="float:right">
+                                Delete Association </a>
+                        </h4>
+                    {% empty %}
+                        <h1> No associated requirements! </h1>
+                    {% endfor %}
+                </div>
             </div>
         {% empty %}
-             <h1> There are no Milestones. </h1>
+            <h1> There are no Milestones. </h1>
         {% endfor %}
 
-    <h1 class="heading"> Assignments </h1>
+        <h1 class="heading"> Assignments </h1>
         <h1 class="nav_link_alt toggle_form"> Assign Team Members </h1>
-        <form action = "{% url "manager.views.manage" %}" method="POST" class="add_requirements_form">
-        {% csrf_token %}
-        {{ form2.as_p }}
-        <input type = "submit" value = "Assign"/>
+        <form action="{% url "manager.views.manage" %}" method="POST" class="add_requirements_form">
+            {% csrf_token %}
+            {{ form2.as_p }}
+            <input type="submit" value="Assign"/>
         </form>
 
         <h1 class="nav_link toggle"> Current Assignments </h1>
@@ -55,11 +62,11 @@
                 <h4 class="nav_link_alt">{{ al }}</h4>
             {% endfor %}
         </div>
-      {% else %}
+    {% else %}
 
         <h1> No Project Selected. </h1>
     {% endif %}
 
 
 
-{% endblock%}
+{% endblock %}

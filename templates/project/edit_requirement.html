@@ -2,13 +2,13 @@
 
 
 {% block user_content %}
-    <h1 class = 'heading'> Edit Requirement </h1>
-    <form action = "#" method="post">
-    {% csrf_token %}
-         {{ form.as_p }}
-    <input type = 'submit' value = 'Save Changes!'/>
+    <h1 class='heading'> Edit Requirement </h1>
+    <form action="#" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='Save Changes!'/>
     </form>
     {% if notify %}
-        <h1 class = 'notify'> {{ message }} </h1>
+        <h1 class='notify'> {{ message }} </h1>
     {% endif %}
 {% endblock %}

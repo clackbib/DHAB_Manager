@@ -1,24 +1,24 @@
-.user_bar
-{
+.user_bar {
     font-size: 2em;
-     margin-top:0px;
+    margin-top: 0px;
     padding: 10px;
 
 }
-.welcome_link
-{
+
+.welcome_link {
     font-size: 15pt;
     margin-right: 75%;
 }
-.selector_label
-{
-  font-size: 40pt;
-  background: -webkit-linear-gradient(#eee, #333);
-  text-shadow: 0 -1px 4px white;
-  -webkit-background-clip:text;
-  opacity: .5;
+
+.selector_label {
+    font-size: 40pt;
+    background: -webkit-linear-gradient(#eee, #333);
+    text-shadow: 0 -1px 4px white;
+    -webkit-background-clip: text;
+    opacity: .5;
 }
-body{
+
+body {
     /*background-image: linear-gradient(to bottom, #92CD00, #E5E4D7);*/
     background-color: whitesmoke;
     background-repeat: no-repeat;
@@ -26,168 +26,157 @@ body{
     width: 1200px;
     margin: auto;
 }
-.project_change_label
-{
+
+.project_change_label {
     font-weight: bold;
 }
-.project_selector
-{
+
+.project_selector {
     text-align: center;
-    color:white;
-    margin-top:-20px;
+    color: white;
+    margin-top: -20px;
     padding-bottom: 10px;
 }
-.logout_link
-{
+
+.logout_link {
     border-radius: 4px;
     padding: 5px 20px;
     background: rgb(202, 60, 60);
 
 }
-.logout_link a
-{
+
+.logout_link a {
     color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     font-size: 15pt;
 }
-.top_wrap
-{
-     background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #646262),
-        color-stop(0.5, #484848),
-        color-stop(0.5, #3D3D3D),
-        color-stop(1, #4C4C4C)
-    );
-    color:white;
+
+.top_wrap {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #646262), color-stop(0.5, #484848), color-stop(0.5, #3D3D3D), color-stop(1, #4C4C4C));
+    color: white;
 }
 
-.project_selector select
-{
+.project_selector select {
     width: 500px;
 }
-#user_content
-{
-    background-color:beige;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #646262),
-        color-stop(0.5, #484848),
-        color-stop(0.5, #3D3D3D),
-        color-stop(1, #4C4C4C)
-    );
+
+#user_content {
+    background-color: beige;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #646262), color-stop(0.5, #484848), color-stop(0.5, #3D3D3D), color-stop(1, #4C4C4C));
     opacity: .9;
     padding: 20px;
     height: 500px;
     overflow-y: auto;
 }
-td,table,th
-{
+
+td, table, th {
     border: solid 1px black;
     border-collapse: collapse;
     text-align: center;
 }
 
-table{
+table {
     width: 1200px;
 }
-thead
-{
+
+thead {
     background-color: deepskyblue;
     opacity: .5;
 }
-textarea
-{
-    width:100%;
+
+textarea {
+    width: 100%;
 }
-.add_requirements_form
-{
-   padding:20px;
+
+.add_requirements_form {
+    padding: 20px;
     overflow-y: auto;
     height: 300px;
 }
-.attribute
-{
-    float:right;
+
+.attribute {
+    float: right;
 }
-.notify
-{
+
+.notify {
     position: absolute;
-    top:50%;
-    left:40%;
-    color:white;
+    top: 50%;
+    left: 40%;
+    color: white;
     background-color: black;
     opacity: .7;
-    padding:20px;
+    padding: 20px;
     border-radius: 10px;
 }
-.heading
-{
-    background-color: rgba(0,0,0,.8);
+
+.heading {
+    background-color: rgba(0, 0, 0, .8);
     color: white;
-    padding:10px 20px;
+    padding: 10px 20px;
     margin: 5px -20px;
 }
-.choice_block
-{
-    border:solid 1px black;
+
+.choice_block {
+    border: solid 1px black;
     text-align: center;
+    background-color: white;
 }
-.toggle, .toggle_form
-{
-    color:white;
+
+.choice_block label {
+    display: inline;
+    background: none;
+}
+
+.toggle, .toggle_form {
+    color: white;
     background-color: black;
     opacity: 1;
 }
-.toggle:hover, .toggle_form:hover
-{
+
+.toggle:hover, .toggle_form:hover {
     cursor: pointer;
     background: rgb(158, 31, 27);
 }
-.toggle +div, .toggle_form + form
-{
-    display:none;
+
+.toggle +div, .toggle_form + form {
+    display: none;
     background-color: white;
 }
-.inner_pane
-{
+
+.inner_pane {
     background-color: white;
-    padding:10px;
+    padding: 10px;
 }
-.nav_link, .nav_link_alt, label
-{
+
+.nav_link, .nav_link_alt, label {
     border-radius: 4px;
     padding: 5px 20px;
     background: rgb(202, 60, 60);
     text-decoration: none;
-    color:white;
+    color: white;
 }
-.nav_link_alt
-{
+
+.nav_link_alt {
     background: rgb(79, 190, 202);
 }
-label
-{
-    background: rgba(202, 146, 55,.6);
+
+label {
+    background: rgba(202, 146, 55, .6);
     display: block;
-    width:100px;
+    width: 100px;
     margin-bottom: 15px;
-    padding:5px;
-    color:black;
+    padding: 5px;
+    color: black;
 
 }
-.nav_link:hover
-{
+
+.nav_link:hover {
     background: rgb(158, 31, 27);
 }
-.ui-widget-content a
-{
-    color:white;
+
+.ui-widget-content a {
+    color: white;
 }
 
 

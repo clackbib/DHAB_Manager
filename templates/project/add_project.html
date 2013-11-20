@@ -1,45 +1,48 @@
 {% extends 'base/base_home.html' %}
+{% load static %}
 
 {% block user_content %}
 
-    <form action = "{% url 'project.views.add_project' %}" method="POST">
+    <form action="{% url 'project.views.add_project' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <h3> Project Mode:</h3>
+        <h3 class="heading"> Project Mode:</h3>
 
 
-        <div class = 'choice_block'>
+        <div class='choice_block'>
             <strong> Understanding:</strong>
-            <label for = 'Detailed'>Detailed</label>
-            <input type = 'radio' name = 'understanding' value = 'Detailed' id = 'Detailed'/>
-            <label for = 'Detailed'>Considerable</label>
-            <input type = 'radio' name = 'understanding' value = 'Considerable' id = 'Considerable'/>
-            <label for = 'Detailed'>General</label>
-            <input type = 'radio' name = 'understanding' value = 'General' id = 'General'/>
+            <label for='Detailed'>Detailed</label>
+            <input type='radio' name='understanding' value='Detailed' id='Detailed' checked/>
+            <label for='Detailed'>Considerable</label>
+            <input type='radio' name='understanding' value='Considerable' id='Considerable'/>
+            <label for='Detailed'>General</label>
+            <input type='radio' name='understanding' value='General' id='General'/>
             <br/>
             <strong>Experience:</strong>
-            <label for = 'Detailed'>Extensive</label>
-            <input type = 'radio' name = 'experience' value = 'Extensive' id = 'Extensive'/>
-            <label for = 'Detailed'>Some</label>
-            <input type = 'radio' name = 'experience' value = 'Some' id = 'Some'/>
-            <label for = 'Detailed'>None</label>
-            <input type = 'radio' name = 'experience' value = 'None' id = 'None'/>
+            <label for='Detailed'>Extensive</label>
+            <input type='radio' name='experience' value='Extensive' id='Extensive' checked/>
+            <label for='Detailed'>Some</label>
+            <input type='radio' name='experience' value='Some' id='Some'/>
+            <label for='Detailed'>None</label>
+            <input type='radio' name='experience' value='None' id='None'/>
             <br/>
             <strong>Requirements conformance:</strong>
-            <label for = 'Detailed'>Extensive</label>
-            <input type = 'radio' name = 'conformance' value = 'Extensive' id = 'Extensive'/>
-            <label for = 'Detailed'>Some</label>
-            <input type = 'radio' name = 'conformance' value = 'Some' id = 'Some'/>
-            <label for = 'Detailed'>None</label>
-            <input type = 'radio' name = 'conformance' value = 'None' id = 'None'/>
+            <label for='Detailed'>Extensive</label>
+            <input type='radio' name='conformance' value='Extensive' id='Extensive' checked/>
+            <label for='Detailed'>Some</label>
+            <input type='radio' name='conformance' value='Some' id='Some'/>
+            <label for='Detailed'>None</label>
+            <input type='radio' name='conformance' value='None' id='None'/>
         </div>
         <br/>
 
 
-        <input type = 'submit' value = 'Create!'/>
+        <input type='submit' value='Create!'/>
     </form>
 
     {% if notify %}
         <h1 class="notify"> {{ message }} </h1>
     {% endif %}
+
+    {% comment %} <script src = "{% static "j" %}">{% endcomment %}
 {% endblock %}

@@ -1,11 +1,11 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 
 
 urlpatterns = patterns('reports.views',
 
-    url(r'^$', 'reports'),
+                       url(r'^$', 'reports'),
 
 
-    #url(r'^login/',''),
+                       #url(r'^login/',''),
 
 )

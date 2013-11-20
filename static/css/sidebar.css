@@ -2,33 +2,31 @@
     display: inline-block;
 
 }
-#sidebar ul li img:hover
-{
-   background: rgb(202, 60, 60);
+
+#sidebar ul li img:hover {
+    background: rgb(202, 60, 60);
 
 }
-#sidebar ul li img
-{
-    width:70px;
-    margin-right:50px;
+
+#sidebar ul li img {
+    width: 70px;
+    margin-right: 50px;
     box-shadow: 2px 2px 4px black;
     border: solid 1px black;
     border-radius: 10px;
-    padding:5px;
-    transition-delay:.1s;
-    transition-duration:.5s;
-
+    padding: 5px;
+    transition-delay: .1s;
+    transition-duration: .5s;
 
 }
-#sidebar ul
-{
+
+#sidebar ul {
     /*background-image: linear-gradient(to left, #92CD00, #FFCF79);*/
-    padding:3px;
-
+    padding: 3px;
 
 }
-#sidebar
-{
+
+#sidebar {
     text-align: center;
     margin-top: -18px;
     margin-bottom: -18px;

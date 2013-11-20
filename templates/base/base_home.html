@@ -7,54 +7,54 @@
 
 
 
-    <link rel = 'stylesheet' href="{% static "css/main_style.css" %}" />
-    <link rel = 'stylesheet' href="{% static "css/sidebar.css" %}" />
+    <link rel='stylesheet' href="{% static "css/main_style.css" %}"/>
+    <link rel='stylesheet' href="{% static "css/sidebar.css" %}"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
     </script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 
 
 
     <script>
 
-  $(document).ready(function() {
-    $( ".accordion" ).accordion({ clearStyle: true, autoHeight: false }).css({'font-size':'9pt'});
+        $(document).ready(function () {
+            $(".accordion").accordion({ clearStyle: true, autoHeight: false }).css({'font-size': '9pt'});
 
-    $('.progressbar').each(function(){
+            $('.progressbar').each(function () {
 
-        $(this).progressbar({value: parseInt($(this).attr("value"))});
-    });
+                $(this).progressbar({value: parseInt($(this).attr("value"))});
+            });
 
-    $(".progressbar > div").css({'background':'rgba(0,140,0,0.5)'});
+            $(".progressbar > div").css({'background': 'rgba(0,140,0,0.5)'});
 
-    $('.jquery_date').datepicker();
+            $('.jquery_date').datepicker();
 
-     $('.delete_link').click(function(){
-         return confirm("Do you really want to delete this item?");
-     });
-      $('.toggle').click(function(){
-          $(this).next().toggle("blind", {}, 500);
-      });
-      $('.toggle_form').click(function(){
-          $(this).next().toggle("blind", {},500)
-          //$('.toggle_form + form').toggle("blind",{},500);
-      });
+            $('.delete_link').click(function () {
+                return confirm("Do you really want to delete this item?");
+            });
+            $('.toggle').click(function () {
+                $(this).next().toggle("blind", {}, 500);
+            });
+            $('.toggle_form').click(function () {
+                $(this).next().toggle("blind", {}, 500)
+                //$('.toggle_form + form').toggle("blind",{},500);
+            });
 
-       $(document).ready(function(){
-            $(".notify").fadeIn("slow");
-            $(".notify").fadeOut(3000);
+            $(document).ready(function () {
+                $(".notify").fadeIn("slow");
+                $(".notify").fadeOut(3000);
 
-            $('.option').click( function() {
-                window.location = $(this).find('a').attr('href');
-            }).hover( function() {
-                        $(this).toggleClass('jquery_link_hover');
-                    });
+                $('.option').click(function () {
+                    window.location = $(this).find('a').attr('href');
+                }).hover(function () {
+                            $(this).toggleClass('jquery_link_hover');
+                        });
+            });
         });
-  });
-  </script>
+    </script>
 {% endblock %}
 
 {% block title %}
@@ -64,45 +64,46 @@
 {% block content %}
 
     {% block userbar %}
-        <div class = 'top_wrap'>
-        <header class = "user_bar">
-                <span class = "welcome_link">Welcome, {{ request.user.username  }}!
+        <div class='top_wrap'>
+            <header class="user_bar">
+                <span class="welcome_link">Welcome, {{ request.user.username }}!
                 </span>
 
-              <span class = "logout_link"><a href="{% url "login.views.disconnect" %}">Log Out !</a>
+              <span class="logout_link"><a href="{% url "login.views.disconnect" %}">Log Out !</a>
               </span>
-        </header>
-        <div class = 'project_selector'>
-            <h2 class ="selector_label"> Selected project:
-                {% if request.session.selected_project %}
-                {{ request.session.selected_project }}
-                {% else %}
-                    No project Selected
-                {% endif %}
-            </h2>
-            <form action = '{% url 'project.views.update_project' %}' method="post">
-            {% csrf_token %}
-                <span class = "project_change_label"> Jump to project </span>
-                <select name = 'project'>
-                    {% if request.session.current_user_projects %}
-                       {% for u in request.session.current_user_projects %}
-                            <option value = "{{ u.id }}"> {{ u.name }} </option>
-                        {% endfor %}
+            </header>
+            <div class='project_selector'>
+                <h2 class="selector_label"> Selected project:
+                    {% if request.session.selected_project %}
+                        {{ request.session.selected_project }}
                     {% else %}
-                        <option value="something">----------</option>
+                        No project Selected
                     {% endif %}
-                    </select>
-                <input type="submit" value="Load Project"/>
-            </form>
+                </h2>
 
-        </div>
+                <form action='{% url 'project.views.update_project' %}' method="post">
+                    {% csrf_token %}
+                    <span class="project_change_label"> Jump to project </span>
+                    <select name='project'>
+                        {% if request.session.current_user_projects %}
+                            {% for u in request.session.current_user_projects %}
+                                <option value="{{ u.id }}"> {{ u.name }} </option>
+                            {% endfor %}
+                        {% else %}
+                            <option value="something">----------</option>
+                        {% endif %}
+                    </select>
+                    <input type="submit" value="Load Project"/>
+                </form>
+
+            </div>
         </div>
     {% endblock %}
     {% block sidebar %}
         {% include "base/sidebar.html" %}
-    {%  endblock %}
+    {% endblock %}
 
-    <section id = "user_content">
+    <section id="user_content">
         {% block user_content %}
 
         {% endblock %}

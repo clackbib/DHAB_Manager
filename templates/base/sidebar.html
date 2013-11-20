@@ -1,24 +1,24 @@
-{%  load static %}
+{% load static %}
 
 <nav id="sidebar">
-	    <ul>
+    <ul>
 
-            <li><a class='sidebar_item'href="{% url 'project.views.projects' %}">
-                <img class='sidebar_item_img' src="{% static "images/sidebar/projects.png" %}" />
-            </a></li>
+        <li><a class='sidebar_item' href="{% url 'project.views.projects' %}">
+            <img class='sidebar_item_img' src="{% static "images/sidebar/projects.png" %}"/>
+        </a></li>
 
-            <li><a class='sidebar_item'href="{% url 'project.views.requirements' %}">
-                <img class='sidebar_item_img' src="{% static "images/sidebar/requirements.png" %}" />
-            </a></li>
+        <li><a class='sidebar_item' href="{% url 'project.views.requirements' %}">
+            <img class='sidebar_item_img' src="{% static "images/sidebar/requirements.png" %}"/>
+        </a></li>
 
-            <li><a class='sidebar_item'href="{% url "reports.views.reports" %}">
-                <img class='sidebar_item_img' src="{% static "images/sidebar/stats.png" %}" />
-            </a></li>
+        <li><a class='sidebar_item' href="{% url "reports.views.reports" %}">
+            <img class='sidebar_item_img' src="{% static "images/sidebar/stats.png" %}"/>
+        </a></li>
 
-            <li><a class='sidebar_item' href="{% url "manager.views.manage" %}">
-                <img class='sidebar_item_img' src="{% static "images/sidebar/settings.png" %}" />
-            </a></li>
-            {% comment %}
+        <li><a class='sidebar_item' href="{% url "manager.views.manage" %}">
+            <img class='sidebar_item_img' src="{% static "images/sidebar/settings.png" %}"/>
+        </a></li>
+        {% comment %}
             <li><a class='sidebar_item'href="{% url "sections.messaging.views.messaging" %}">
                 <img class='sidebar_item_img' src="{% static "images/sidebar/messages.png" %}" />
 
@@ -33,6 +33,6 @@
                 <img class='sidebar_item_img' src="{% static "images/sidebar/settings_icon.png" %}" />
             </a></li>
             {% endcomment %}
-        </ul>
+    </ul>
 
 </nav>

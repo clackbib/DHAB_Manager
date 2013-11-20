@@ -1,10 +1,10 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 
 
 urlpatterns = patterns('login.views',
 
-    url(r'^$', 'register'),
-    url(r'^login/','connect'),
-    url(r'^logout/', 'disconnect'),
+                       url(r'^$', 'register'),
+                       url(r'^login/', 'connect'),
+                       url(r'^logout/', 'disconnect'),
 
 )

@@ -1,11 +1,13 @@
 # Create your views here.
-from django.shortcuts import render,redirect
-from login.forms import Registration,ConnectionForm
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
+
+from login.forms import Registration, ConnectionForm
 from login.models import Profile
+
 
 def register(request):
     error = False
@@ -26,7 +28,7 @@ def register(request):
                 error = True
             else:
                 user3 = User.objects.create_user(username, email, password)
-                Profile(user = user3).save(); #Profile Created based on User.
+                Profile(user=user3).save(); #Profile Created based on User.
                 return redirect("login.views.register")
         else:
             error = True
@@ -34,6 +36,7 @@ def register(request):
     else:
         form = Registration()
     return render(request, 'register.html', locals())
+
 
 def connect(request):
     notify = False
@@ -59,6 +62,7 @@ def connect(request):
     else:
         form = ConnectionForm()
     return render(request, 'login.html', locals())
+
 
 @login_required(login_url="login.views.connect")
 def disconnect(request):
