@@ -1,4 +1,5 @@
 DHAB_Manager
 ============
 
-Software Project Management Project
+Software Project Management Tool
+
